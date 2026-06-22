@@ -7,19 +7,22 @@ public class ArithmeticOperations
     public static void main(String[] args)
     {
         Scanner s = new Scanner(System.in);
-        System.out.print("Enter the first number : ");
-        int a = s.nextInt();
-        System.out.print("Enter the second number : ");
-        int b = s.nextInt();
-        int sum = a + b;
-        int difference = a - b;
-        int product = a * b;
-        int divide = a / b;
-        System.out.println("Sum of above two numbers are "+sum);
-        System.out.println("Difference of above two numbers are "+difference);
-        System.out.println("Product of above two numbers are "+product);
-        System.out.println("Division of above two numbers are "+divide);
+        System.out.print("Enter Maths mark : ");
+        int math = s.nextInt();
+        System.out.print("Enter English mark : ");
+        int english = s.nextInt();
+        System.out.print("Enter Science mark : ");
+        int science = s.nextInt();
 
+        if((math>=0 && math<=100) && (science>=0 && science<=100) && (english>=0 && english<=100) )
+        {
+           int total = math+english+science;
+           System.out.println("Total marks : "+total);
+           double average = (double) total /3;
+           System.out.println("Average of these marks is : "+average);
+        }
+        else
+            System.out.println("Invalid marks");
     }
 
 
