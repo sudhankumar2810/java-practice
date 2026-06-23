@@ -6,24 +6,25 @@ public class StudentPercentageCalculator {
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the marks : ");
-        int[] marks = new int[5];
+        int n=5;
         int total = 0;
         boolean isValid = true;
-        for(int i=0;i<marks.length;i++)
+
+        for(int i=1;i<=n;i++)
         {
-            marks[i] = scanner.nextInt();
-            if(marks[i]<0 || marks[i]>100)
+            int marks = scanner.nextInt();
+            if(marks<0 || marks>100)
             {
                 isValid=false;
                 break;
             }
-            total+=marks[i];
+            total+=marks;
         }
 
         if(isValid)
         {
-            int full = marks.length*100;
-            double average = (double) total /marks.length;
+            int full = n*100;
+            double average = (double) total /n;
             double percentage = ((double) total /full) * 100;
             System.out.println("Total : "+total);
             System.out.println("Average : "+average);
